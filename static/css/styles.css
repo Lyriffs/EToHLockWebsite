@@ -589,3 +589,51 @@ main {
 .evidence-content li {
     margin-bottom: 4px;
 }
+
+.evidence-content a {
+    color: #5da3ff;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.evidence-content a:hover {
+    color: #81b8ff;
+}
+
+.evidence-content strong {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.evidence-content em {
+    color: #c0c0c0;
+    font-style: italic;
+}
+
+.evidence-content h1, .evidence-content h2, .evidence-content h3 {
+    color: #ededed;
+}
+
+.evidence-content blockquote {
+    border-left: 4px solid #5da3ff;
+    padding-left: 16px;
+    color: #cccccc;
+    font-style: italic;
+    margin: 12px 0;
+    background: rgba(93, 163, 255, 0.05);
+    border-radius: 4px;
+}
+
+.evidence-content code, .evidence-content pre {
+    background: #1f1f1f;
+    color: #ffcd5c;
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-family: 'Geist Mono', monospace;
+}
+
+.evidence-content ul li::marker, .evidence-content ol li::marker {
+    color: #5da3ff;
+}

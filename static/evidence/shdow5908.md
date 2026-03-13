@@ -1,5 +1,3 @@
-**TW: Suicide, Sexual Contact, Addiction.**
-
 Red redacted names are from shdow5908, as tulinjini has him saved under his real name.
 
 # Suicide Threats During Relationship
