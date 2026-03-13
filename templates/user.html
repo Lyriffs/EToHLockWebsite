@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ user.name }} - EToH Lock</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Geist:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <a class="logo" href="/">EToH Lock</a>
+            <span class="header-divider">/</span>
+            <span class="header-sub">{{ user.name }}</span>
+        </div>
+    </header>
+
+    <div class="detail-main">
+        <div class="detail-hero">
+            <div class="detail-avatar">
+                {% if user.image_url %}
+                    <img src="{{ user.image_url }}" alt="{{ user.name }}">
+                {% else %}
+                    <div class="detail-avatar-placeholder">{{ user.name[0] | upper }}</div>
+                {% endif %}
+            </div>
+            <div class="detail-meta">
+                <div class="detail-name-row">
+                    <h1 class="detail-name">{{ user.name }}</h1>
+                    <span class="ll ll-{{ user.lock_level }} ll-large">Lock Level {{ user.lock_level }}</span>
+                </div>
+                {% if user.description %}
+                    <p class="detail-desc">{{ user.description }}</p>
+                {% else %}
+                    <p class="detail-desc" style="color:var(--dim);font-style:italic">No description provided.</p>
+                {% endif %}
+            </div>
+        </div>
+
+        <div class="detail-evidence">
+            <div class="section-label">Evidence</div>
+            {% if evidence_html %}
+                <div class="evidence-content">{{ evidence_html | safe }}</div>
+            {% else %}
+                <div class="evidence-empty">Evidence will be added soon.</div>
+            {% endif %}
+        </div>
+
+        <div class="detail-accounts">
+            <div class="section-label">{{ user.accounts | length }} Account(s):</div><br>
+            <div class="accounts-list">
+                {% for account_id in user.accounts %}
+                    <div class="account-row">
+                        <span class="account-id">{{ account_id }}</span>
+                        <button class="copy-btn" onclick="copyId('{{ account_id }}', this)">Copy</button>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/user.js') }}"></script>
+</body>
+</html>
