@@ -79,6 +79,8 @@ def get_data():
 def index():
     data = get_data()
     total = sum(len(p["accounts"]) for p in data)
+    for user in data:
+        user['has_evidence'] = os.path.exists(os.path.join("static", "evidence", f"{user['name']}.md"))
     return render_template('index.html', users=data, total=total)
 
 @app.route('/user/<string:name>')

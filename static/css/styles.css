@@ -637,3 +637,7 @@ main {
 .evidence-content ul li::marker, .evidence-content ol li::marker {
     color: #5da3ff;
 }
+
+.card.no-evidence {
+    opacity: 0.5;
+}
