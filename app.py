@@ -98,5 +98,18 @@ def user_detail(name):
 
     return render_template('user.html', user=user, evidence_html=evidence_html)
 
+CREDITS = [
+    {
+        "name": "TheHaloDeveloper",
+        "role": "Owner, Developer, Evidence Curator",
+        "bio": "Halo built and maintains the EToH Lock bot and website. He also develops TowerStats.com, sclp.pro, and occasionally contributes to Caleb's Soul Crushing Domain.",
+        "image": "/static/assets/users/credits/thehalodeveloper.png"
+    },
+]
+
+@app.route('/credits')
+def credits():
+    return render_template('credits.html', credits=CREDITS)
+
 if __name__ == '__main__':
     app.run(debug=True)
