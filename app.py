@@ -108,7 +108,7 @@ CREDITS = [
     {
         "name": "Solariteee",
         "role": "Staff, Evidence Curator",
-        "bio": "Solariteee is a staff member and evidence curator for EToH Lock. [UPDATE DESC]",
+        "bio": "Solar advocates for community safety and is a former staff member across multiple fangames, including community manager for EToH 3XS. She now contributes to other communities like TM and works as an experienced QA tester.",
         "image": "/static/assets/users/credits/solariteee.png"
     },
     {
