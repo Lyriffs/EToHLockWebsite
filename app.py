@@ -119,13 +119,13 @@ CREDITS = [
     },
     {
         "name": "imkostasbtw",
-        "role": "Former Staff, Evidence Curator",
+        "role": "Evidence Curator Former Staff",
         "bio": "Kostas was a former staff member for EToH Lock and is now an evidence curator. [UPDATE DESC]",
         "image": "/static/assets/users/credits/imkostasbtw.png"
     },
     {
         "name": "k_tten0",
-        "role": "Former Staff, Evidence Curator",
+        "role": "Evidence Curator, Former Staff",
         "bio": "Lyriffs was a former staff member for EToH Lock and is now an evidence curator. [UPDATE DESC]",
         "image": "/static/assets/users/credits/k_tten0.png"
     },
