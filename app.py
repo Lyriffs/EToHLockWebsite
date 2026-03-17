@@ -114,7 +114,7 @@ CREDITS = [
     {
         "name": "Manager_Magolor",
         "role": "Staff, Evidence Curator",
-        "bio": "Manager_Magolor is a staff member and evidence curator for EToH Lock. [UPDATE DESC]",
+        "bio": "Lor hunts down exploiters across EToH games and helps keep Caleb's Soul Crushing Domain clean. He also maintains an osu! private server and occasionally works on projects outside of Roblox.",
         "image": "/static/assets/users/credits/manager_magolor.png"
     },
     {
