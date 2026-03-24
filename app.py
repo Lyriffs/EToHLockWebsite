@@ -71,7 +71,70 @@ def get_data():
     _cache['data'] = {'value': data, 'time': now}
     return data
 
+CREDITS = [
+    {
+        "name": "TheHaloDeveloper",
+        "role": "Owner, Staff, Evidence Curator",
+        "bio": "Halo built and maintains the RoLock bot and website. He also develops TowerStats.com, sclp.pro, and occasionally contributes to Caleb's Soul Crushing Domain.",
+        "image": "/static/assets/users/credits/thehalodeveloper.webp"
+    },
+    {
+        "name": "Solariteee",
+        "role": "Staff, Evidence Curator",
+        "bio": "Solar advocates for community safety and is a former staff member across multiple fangames, including community manager for EToH 3XS. She now contributes to other communities like TM and works as an experienced QA tester.",
+        "image": "/static/assets/users/credits/solariteee.webp"
+    },
+    {
+        "name": "Manager_Magolor",
+        "role": "Staff, Evidence Curator",
+        "bio": "Lor hunts down exploiters across EToH games and helps keep Caleb's Soul Crushing Domain clean. He also maintains an osu! private server and occasionally works on projects outside of Roblox.",
+        "image": "/static/assets/users/credits/manager_magolor.webp"
+    },
+    {
+        "name": "imkostasbtw",
+        "role": "Evidence Curator, Former Staff",
+        "bio": "Kostas was a former staff member for RoLock and is now an evidence curator. [UPDATE DESC]",
+        "image": "/static/assets/users/credits/imkostasbtw.webp"
+    },
+    {
+        "name": "k_tten0",
+        "role": "Staff, Evidence Curator",
+        "bio": "Lyriffs is a staff member for RoLock and is also an evidence curator. [UPDATE DESC]",
+        "image": "/static/assets/users/credits/k_tten0.webp"
+    },
+    {
+        "name": "xXTheR3DGamerXx",
+        "role": "Former Staff",
+        "bio": "Red was a former staff member for RoLock. [UPDATE DESC]",
+        "image": "/static/assets/users/credits/xxther3dgamerxx.webp"
+    },
+    {
+        "name": "LoveliestJacob",
+        "role": "Former Staff",
+        "bio": "LoveliestJacob was a former staff member for RoLock. [UPDATE DESC]",
+        "image": "/static/assets/users/credits/loveliestjacob.webp"
+    },
+    {
+        "name": "obbylordd",
+        "role": "Former Staff",
+        "bio": "obbylordd was a former staff member for RoLock. [UPDATE DESC]",
+        "image": "/static/assets/users/credits/obbylordd.webp"
+    }
+]
+
 @app.route('/')
+def home():
+    data = get_data()
+    return render_template('home.html',
+        player_count=len(data),
+        total_accounts=sum(len(u['accounts']) for u in data),
+        ll3=sum(1 for u in data if u['lock_level'] == 3),
+        ll2=sum(1 for u in data if u['lock_level'] == 2),
+        ll1=sum(1 for u in data if u['lock_level'] == 1),
+        staff_count=len(CREDITS),
+    )
+
+@app.route('/banlist')
 def index():
     data = get_data()
     total = sum(len(p["accounts"]) for p in data)
@@ -93,57 +156,6 @@ def user_detail(name):
             evidence_html = markdown.markdown(f.read(), extensions=["tables", "fenced_code"])
 
     return render_template('user.html', user=user, evidence_html=evidence_html)
-
-CREDITS = [
-    {
-        "name": "TheHaloDeveloper",
-        "role": "Owner, Staff, Evidence Curator",
-        "bio": "Halo built and maintains the EToH Lock bot and website. He also develops TowerStats.com, sclp.pro, and occasionally contributes to Caleb's Soul Crushing Domain.",
-        "image": "/static/assets/users/credits/thehalodeveloper.webp"
-    },
-    {
-        "name": "Solariteee",
-        "role": "Staff, Evidence Curator",
-        "bio": "Solar advocates for community safety and is a former staff member across multiple fangames, including community manager for EToH 3XS. She now contributes to other communities like TM and works as an experienced QA tester.",
-        "image": "/static/assets/users/credits/solariteee.webp"
-    },
-    {
-        "name": "Manager_Magolor",
-        "role": "Staff, Evidence Curator",
-        "bio": "Lor hunts down exploiters across EToH games and helps keep Caleb's Soul Crushing Domain clean. He also maintains an osu! private server and occasionally works on projects outside of Roblox.",
-        "image": "/static/assets/users/credits/manager_magolor.webp"
-    },
-    {
-        "name": "imkostasbtw",
-        "role": "Evidence Curator, Former Staff",
-        "bio": "Kostas was a former staff member for EToH Lock and is now an evidence curator. [UPDATE DESC]",
-        "image": "/static/assets/users/credits/imkostasbtw.webp"
-    },
-    {
-        "name": "k_tten0",
-        "role": "Staff, Evidence Curator",
-        "bio": "Lyriffs is a staff member for EToH Lock and is also an evidence curator. [UPDATE DESC]",
-        "image": "/static/assets/users/credits/k_tten0.webp"
-    },
-    {
-        "name": "xXTheR3DGamerXx",
-        "role": "Former Staff",
-        "bio": "Red was a former staff member for EToH Lock. [UPDATE DESC]",
-        "image": "/static/assets/users/credits/xxther3dgamerxx.webp"
-    },
-    {
-        "name": "LoveliestJacob",
-        "role": "Former Staff",
-        "bio": "LoveliestJacob was a former staff member for EToH Lock. [UPDATE DESC]",
-        "image": "/static/assets/users/credits/loveliestjacob.webp"
-    },
-    {
-        "name": "obbylordd",
-        "role": "Former Staff",
-        "bio": "obbylordd was a former staff member for EToH Lock. [UPDATE DESC]",
-        "image": "/static/assets/users/credits/obbylordd.webp"
-    }
-]
 
 @app.route('/credits')
 def credits():

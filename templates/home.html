@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoLock</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Geist:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2FNMG5MCC0"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-2FNMG5MCC0');
+</script>
+<body>
+    <header>
+        <div class="header-left">
+            <span class="logo">RoLock</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:16px">
+            <a class="github-link" href="/credits">Credits</a>
+            <a class="github-link" href="https://github.com/TheHaloDeveloper/EToHLockWebsite" target="_blank">GitHub</a>
+        </div>
+    </header>
+
+    <main class="home-main">
+        <div class="home-hero">
+            <h1 class="home-title">RoLock</h1>
+            <p class="home-desc">add desc</p>
+            <div class="home-stats-row">
+                <div class="home-stat">
+                    <span class="home-stat-n">{{ total_accounts }}</span>
+                    <span class="home-stat-label">accounts locked</span>
+                </div>
+                <div class="home-stat-divider"></div>
+                <div class="home-stat">
+                    <span class="home-stat-n">{{ player_count }}</span>
+                    <span class="home-stat-label">players</span>
+                </div>
+                <div class="home-stat-divider"></div>
+                <div class="home-stat">
+                    <span class="home-stat-n" style="color:var(--ll3)">{{ ll3 }}</span>
+                    <span class="home-stat-label">LL3</span>
+                </div>
+                <div class="home-stat-divider"></div>
+                <div class="home-stat">
+                    <span class="home-stat-n" style="color:var(--ll2)">{{ ll2 }}</span>
+                    <span class="home-stat-label">LL2</span>
+                </div>
+                <div class="home-stat-divider"></div>
+                <div class="home-stat">
+                    <span class="home-stat-n" style="color:var(--ll1)">{{ ll1 }}</span>
+                    <span class="home-stat-label">LL1</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="home-cards">
+            <a class="home-card" href="/banlist">
+                <div class="home-card-top">
+                    <span class="home-card-title">Banlist</span>
+                </div>
+                <p class="home-card-desc">Browse all locked players, filter by lock level, and view individual case files with evidence.</p>
+                <div class="home-card-meta">
+                    <span class="home-tag ll3-tag">LL3</span>
+                    <span class="home-tag ll2-tag">LL2</span>
+                    <span class="home-tag ll1-tag">LL1</span>
+                    <span class="home-card-count">{{ total_accounts }} accounts</span>
+                </div>
+            </a>
+
+            <a class="home-card" href="/credits">
+                <div class="home-card-top">
+                    <span class="home-card-title">Credits</span>
+                </div>
+                <p class="home-card-desc">The staff and evidence curators who maintain RoLock and keep things up to date.</p>
+                <div class="home-card-meta">
+                    <span class="home-card-count">{{ staff_count }} contributors</span>
+                </div>
+            </a>
+        </div>
+    </main>
+</body>
+</html>
