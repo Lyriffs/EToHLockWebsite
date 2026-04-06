@@ -20,3 +20,21 @@ Examples of their activity will be shown below.
 # Doxxing
 
 Yoi is known for fake doxxing people in order to get a scare. He has actually doxxed people before, but there hasn't been much documented cases of that. 
+
+![yoiboiitsrya-006](/static/assets/evidence-files/yoiboiitsrya-006.webp)
+
+# Impersonation
+
+Yoi has been known for impersonating people. The most egregious case is when he impersonated a mentally unstable person in order to deflect blame onto them.
+
+![yoiboiitsrya-007](/static/assets/evidence-files/yoiboiitsrya-007.webp)
+![yoiboiitsrya-008](/static/assets/evidence-files/yoiboiitsrya-008.webp)
+![yoiboiitsrya-009](/static/assets/evidence-files/yoiboiitsrya-009.webp)
+![yoiboiitsrya-010](/static/assets/evidence-files/yoiboiitsrya-010.webp)
+![yoiboiitsrya-011](/static/assets/evidence-files/yoiboiitsrya-011.webp)
+
+# Aftermath
+
+Yoi has now been dormant in the tower community for months now. Thanks mainly to the efforts of Discord user m_gz (Magz) and others, Yoi has been placed on Rolock in the early days of the bot, and others are now aware of his true nature.
+
+To get a way more comprehensive picture on yoiboiitsrya, refer to this document: https://docs.google.com/document/d/1QiWE79Wox4jNTjL9gKvn3a9oucFQNs2pX21iLAfNGBc/edit?usp=sharing
